@@ -23,7 +23,7 @@ INSTALLED_APPS = [
     # Project Apps
     'category.apps.CategoryConfig',
     'accounts.apps.AccountsConfig',
-
+    'store.apps.StoreConfig',
 
     'django.contrib.admin',
     'django.contrib.auth',
