@@ -1,3 +1,4 @@
+from urllib import request
 from django.shortcuts import get_object_or_404, render
 from .models import Product
 from category.models import Category
@@ -21,3 +22,8 @@ def store(request, category_slug=None):
         'product_count': product_count
     }
     return render(request, 'store/store.html', context)
+
+
+def product_detail(request, category_slug, product_slug):
+
+    return render(request, 'store/product_detail.html')
