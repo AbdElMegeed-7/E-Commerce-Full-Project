@@ -43,13 +43,22 @@
                   <div class="col">
                     <div class="input-group input-spinner">
                       <div class="input-group-prepend">
-                        <button
+                        <!-- <button
                           class="btn btn-light"
                           type="button"
                           id="button-plus"
                         >
                           <i class="fa fa-minus"></i>
-                        </button>
+                        </button> -->
+                        <!--Important  add_ The products Using The - minus icon -->
+                        <a
+                          href="{% url 'remove_cart' cart_item.product.id %}"
+                          class="btn btn-light"
+                          type="button"
+                          id="button-plus"
+                        >
+                          <i class="fa fa-minus"></i>
+                        </a>
                       </div>
                       <input
                         type="text"
@@ -101,12 +110,12 @@
             </dl>
             <dl class="dlist-align">
               <dt>Tax:</dt>
-              <dd class="text-right">$10.00</dd>
+              <dd class="text-right">$ {{ tax }}</dd>
             </dl>
             <dl class="dlist-align">
-              <dt>Total:</dt>
+              <dt>Grand Total:</dt>
               <dd class="text-right text-dark b">
-                <strong>$ 59.99</strong>
+                <strong>$ {{ grand_total }}</strong>
               </dd>
             </dl>
             <hr />
